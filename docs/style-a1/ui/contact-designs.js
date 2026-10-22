@@ -208,7 +208,23 @@
             }
           },
           'expired-callback': () => { lockMail('Weryfikacja wygasła. Spróbuj ponownie.'); captchaRetry.hidden = false; },
-          'error-callback': () => { lockMail('Nie udało się załadować CAPTCHA. Sprawdź połączenie i spróbuj ponownie.'); captchaRetry.hidden = false; return true; },
+          'error-callback': errorCode => {
+            const code = String(errorCode || '').replace(/[^0-9]/g, '').slice(0, 6);
+            const message = code === '110200'
+              ? 'Domena tej strony nie jest dodana do CAPTCHA. Administrator musi dodać dzabrys.github.io w ustawieniach Turnstile.'
+              : ['110100', '110110', '400020', '400070'].includes(code)
+                ? 'Konfiguracja CAPTCHA wymaga sprawdzenia przez administratora.'
+                : code === '200100'
+                  ? 'Sprawdź datę i godzinę urządzenia, a następnie odśwież stronę.'
+                  : 'Nie udało się połączyć z CAPTCHA Cloudflare. Otwórz tę stronę w aktualnym Chrome, Edge lub Firefox i spróbuj ponownie. Dane pozostają w formularzu.';
+            lockMail(message + (code ? ' Kod błędu: ' + code + '.' : ''));
+            captchaRetry.hidden = false;
+            return true;
+          },
+          'unsupported-callback': () => {
+            lockMail('Ta przeglądarka nie obsługuje CAPTCHA. Otwórz stronę w aktualnym Chrome, Edge lub Firefox. Dane pozostają w formularzu.');
+            captchaRetry.hidden = false;
+          },
         });
         captchaStatus.textContent = 'Dokończ weryfikację w polu powyżej.';
       } catch {
