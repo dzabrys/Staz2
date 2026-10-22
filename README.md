@@ -15,3 +15,8 @@ W prywatnym pliku konfiguracyjnym poza repozytorium ustaw `CLOUDFLARE_ACCOUNT_ID
 Dodaj `dzabrys.github.io` do dozwolonych hostname widgetu Turnstile. Następnie wykonaj `node tools/deploy-captcha.cjs <ścieżka-do-prywatnego-pliku-env>`. Skrypt wdroży Worker, ustawi sekret i wpisze publiczny adres backendu do kontakt.html. Zacommituj zmieniony kontakt.html i wypchnij do main.
 
 Testy backendu: `node backend/worker.test.mjs`. Limit prób jest lokalny dla instancji Workera; nie stanowi globalnego limitu otrzymanych e-maili. Strona przygotowuje wiadomość w poczcie użytkownika, a użytkownik sam potwierdza wysłanie.
+
+
+Strona: https://dzabrys.github.io/Staz2/
+Backend CAPTCHA: https://staz2-captcha.dzabrys-staz2.workers.dev/
+Kod i sekret zostały wdrożone do Cloudflare; sekret pozostaje poza repozytorium.
