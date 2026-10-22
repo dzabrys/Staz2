@@ -1,0 +1,147 @@
+/* Three layout proposals. Original offer and shared product data stay intact. */
+.modern-school .school-polished .school-filters button{min-height:44px}
+
+/* A: open white composition with a distinct photo and a calm product grid. */
+.school-variant-a .school-polished .company-hero{grid-template-columns:1.12fr 1fr;background:#fff;box-shadow:none;border-radius:0;overflow:visible;gap:40px;padding:4px 0 26px}
+.school-variant-a .school-polished .company-intro{padding:20px 0}
+.school-variant-a .school-polished .company-intro>.company-eyebrow{color:#52617d;margin-bottom:18px}
+.school-variant-a .school-polished .company-intro h1{color:#102478;font-size:clamp(38px,4vw,55px)}
+.school-variant-a .school-polished .company-intro h1 em{color:#102478}
+.school-variant-a .school-polished .company-intro>p:not(.company-eyebrow){color:#52617d;font-size:17px;max-width:38ch}
+.school-variant-a .school-polished .company-intro .company-text-link{color:#102478}
+.school-variant-a .school-polished .company-intro a:focus-visible{outline-color:#102478}
+.school-variant-a .school-polished .company-photo{margin:0;min-height:345px;border-radius:20px;box-shadow:0 15px 30px -22px #10247855}
+.school-variant-a .school-polished .company-use-strip{border-top:1px solid #dfe5ef;padding-top:22px}
+.school-variant-a .school-polished .games-section{padding:30px 24px;margin-top:30px}
+.school-variant-a .school-polished .company-section-heading h2{font-size:30px}
+.school-variant-a .school-polished .game-image{aspect-ratio:2}
+.school-variant-a .school-polished .game-card{box-shadow:0 5px 14px -11px #10247855}
+.school-variant-a .school-polished .custom-game-card{background:#fff5e9;border:1px solid #ffe3c4;color:#102478}
+.school-variant-a .school-polished .custom-game-card h3{color:#102478}
+.school-variant-a .school-polished .custom-game-card :is(.section-eyebrow,p:not(.section-eyebrow)){color:#52617d}
+.school-variant-a .school-polished .custom-link{color:#102478;border-top-color:#e9d8c4}
+.school-variant-a .school-polished .custom-link:focus-visible{outline-color:#102478}
+
+/* B: photo-led opening, two wide product columns and a short custom banner. */
+.school-variant-b .school-polished .company-hero{display:block;min-height:440px;border-radius:24px}
+.school-variant-b .school-polished .company-photo{position:absolute;inset:0;width:100%;height:100%;min-height:0;margin:0;border-radius:0;z-index:0;pointer-events:none}
+.school-variant-b .school-polished .company-photo>img{object-position:68% 38%}
+.school-variant-b .school-polished .company-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0c1c62f7 0%,#0c1c62ee 23%,#0c1c62a6 48%,#0c1c621a 77%)}
+.school-variant-b .school-polished .company-intro{max-width:55%;padding:42px;min-height:440px;display:flex;flex-direction:column;justify-content:center}
+.school-variant-b .school-polished .company-intro h1{font-size:clamp(38px,3.6vw,49px);max-width:12ch}
+.school-variant-b .school-polished .company-intro>p:not(.company-eyebrow){max-width:34ch}
+.school-variant-b .school-polished .games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.school-variant-b .school-polished .game-link{display:grid;grid-template-columns:36% minmax(0,1fr)}
+.school-variant-b .school-polished .game-image{width:100%;height:100%;min-height:235px;aspect-ratio:auto}
+.school-variant-b .school-polished .game-image img{object-position:center}
+.school-variant-b .school-polished .game-copy{padding:20px;min-height:235px}
+.school-variant-b .school-polished .game-copy h3{font-size:21px}
+.school-variant-b .school-polished .game-description{min-height:0;margin-bottom:18px}
+.school-variant-b .school-polished .game-bottom{flex-wrap:wrap;gap:10px}
+.school-variant-b .school-polished .custom-game-card{padding:24px;gap:15px;background:#102478}
+.school-variant-b .school-polished .custom-game-card h3{font-size:27px}
+.school-variant-b .school-polished .custom-game-card h3 br{display:none}
+.school-variant-b .school-polished .games-section:before{background-image:none;background-color:#f1f6fb;border-radius:22px}
+.school-variant-b .school-polished .company-use-strip{padding-top:24px}
+
+/* C: short opening and catalog with persistent grade choices beside the grid. */
+.school-variant-c .school-polished .company-hero{grid-template-columns:1fr 230px;background:#fff;border-radius:0;box-shadow:none;border-bottom:1px solid #dfe5ef;padding:0 0 25px;gap:35px;overflow:visible}
+.school-variant-c .school-polished .company-intro{padding:4px 0;max-width:620px}
+.school-variant-c .school-polished .company-intro>.company-eyebrow{color:#52617d;margin-bottom:12px}
+.school-variant-c .school-polished .company-intro h1{color:#102478;font-size:39px;line-height:1.08;margin-bottom:14px}
+.school-variant-c .school-polished .company-intro h1 br{display:none}
+.school-variant-c .school-polished .company-intro h1 em{color:#102478}
+.school-variant-c .school-polished .company-intro>p:not(.company-eyebrow){color:#52617d;max-width:47ch;font-size:15px}
+.school-variant-c .school-polished .company-intro .company-text-link{color:#102478}
+.school-variant-c .school-polished .company-intro a:focus-visible{outline-color:#102478}
+.school-variant-c .school-polished .company-actions{margin-top:17px}
+.school-variant-c .school-polished .company-photo{margin:0;min-height:210px;border-radius:15px}
+.school-variant-c .school-polished .company-photo>img{object-position:65% 50%}
+.school-variant-c .school-polished .company-use-strip{display:none}
+.school-variant-c .school-polished .games-section{display:grid;grid-template-columns:160px minmax(0,1fr);gap:0 26px;background:none;padding:0;margin-top:30px}
+.school-variant-c .school-polished .games-section:before{content:none}
+.school-variant-c .school-polished .company-section-heading{grid-column:1/-1;margin-bottom:24px}
+.school-variant-c .school-polished .company-section-heading h2{font-size:27px}
+.school-variant-c .school-polished .school-filter-bar{grid-column:1;grid-row:2;display:flex;flex-direction:column;align-items:stretch;gap:15px;margin:0;padding-top:2px}
+.school-variant-c .school-polished .school-filter-bar[hidden]{display:none}
+.school-variant-c .school-polished .school-filters{display:grid;gap:7px}
+.school-variant-c .school-polished .school-filters button{justify-content:start;min-height:44px;border-radius:9px;padding-inline:15px;border-color:transparent;background:#f1f5fb}
+.school-variant-c .school-polished .school-filters button[aria-pressed="true"]{background:#102478}
+.school-variant-c .school-polished .school-result-count{padding-left:15px}
+.school-variant-c .school-polished .games-grid{grid-column:2;grid-row:2;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.school-variant-c .school-polished .game-image{aspect-ratio:2.2}
+.school-variant-c .school-polished .game-copy{padding:17px}
+.school-variant-c .school-polished .game-copy h3{font-size:20px}
+.school-variant-c .school-polished .game-bottom{flex-wrap:wrap}
+.school-variant-c .school-polished .catalog-note{grid-column:2}
+.school-variant-c .school-polished .custom-game-card{background:#f1f5fb;color:#102478;padding:24px}
+.school-variant-c .school-polished .custom-game-card h3{font-size:27px;color:#102478}
+.school-variant-c .school-polished .custom-game-card :is(p:not(.section-eyebrow),.section-eyebrow){color:#52617d}
+.school-variant-c .school-polished .custom-link{color:#102478;border-top-color:#dfe5ef}
+.school-variant-c .school-polished .custom-link:focus-visible{outline-color:#102478}
+.school-variant-c .school-polished .company-order{padding-top:38px}
+
+@media(max-width:1000px){
+  .school-variant-a .school-polished .company-hero{gap:26px}
+  .school-variant-b .school-polished .company-intro{max-width:60%;padding:32px}
+  .school-variant-b .school-polished .game-link{grid-template-columns:1fr}
+  .school-variant-b .school-polished .game-image{min-height:0;aspect-ratio:2.2;height:auto}
+  .school-variant-b .school-polished .game-copy{min-height:205px}
+  .school-variant-c .school-polished .company-hero{grid-template-columns:1fr 190px;gap:25px}
+  .school-variant-c .school-polished .games-section{grid-template-columns:140px minmax(0,1fr);gap:0 20px}
+  .school-variant-c .school-polished .game-copy h3{font-size:18px}
+}
+@media(max-width:750px){
+  .school-variant-c .school-polished .games-section{display:block}
+  .school-variant-c .school-polished .school-filter-bar{display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+  .school-variant-c .school-polished .school-filters{display:flex;flex-wrap:wrap}
+  .school-variant-c .school-polished .school-result-count{padding-left:0}
+}
+@media(max-width:620px){
+  .school-variant-a .school-polished .company-hero{grid-template-columns:1fr;gap:8px;padding-bottom:22px}
+  .school-variant-a .school-polished .company-intro{padding:5px 4px 12px}
+  .school-variant-a .school-polished .company-intro h1{font-size:39px}
+  .school-variant-a .school-polished .company-intro>p:not(.company-eyebrow){font-size:15px}
+  .school-variant-a .school-polished .company-photo{height:210px;min-height:0;margin:0;border-radius:16px}
+  .school-variant-a .school-polished .games-section{padding:24px 12px;margin-top:25px}
+  .school-variant-a .school-polished .game-image{aspect-ratio:1}
+  .school-variant-a .school-polished .company-section-heading h2{font-size:26px}
+  .school-variant-b .school-polished .company-hero{display:grid;grid-template-columns:1fr;min-height:0}
+  .school-variant-b .school-polished .company-photo{position:relative;inset:auto;grid-row:1;height:215px;min-height:0;margin:0;width:100%;border-radius:0}
+  .school-variant-b .school-polished .company-photo:after{content:none}
+  .school-variant-b .school-polished .company-photo>img{object-position:60% 45%}
+  .school-variant-b .school-polished .company-intro{grid-row:2;max-width:none;min-height:0;padding:26px 24px}
+  .school-variant-b .school-polished .company-intro h1{font-size:35px;max-width:15ch}
+  .school-variant-b .school-polished .company-intro>p:not(.company-eyebrow){max-width:none}
+  .school-variant-b .school-polished .games-grid{grid-template-columns:1fr}
+  .school-variant-b .school-polished .game-link{grid-template-columns:90px minmax(0,1fr);padding:13px;gap:13px}
+  .school-variant-b .school-polished .game-image{width:90px;height:100px;min-height:0;aspect-ratio:auto;border-radius:9px}
+  .school-variant-b .school-polished .game-copy{padding:0;min-height:140px}
+  .school-variant-b .school-polished .game-copy h3{font-size:18px}
+  .school-variant-b .school-polished .custom-game-card h3{font-size:27px}
+  .school-variant-c .school-polished .company-hero{grid-template-columns:minmax(0,1fr) 100px;gap:14px;padding-bottom:22px}
+  .school-variant-c .school-polished .company-intro{display:contents}
+  .school-variant-c .school-polished .company-intro>.company-eyebrow{grid-column:1/-1;margin-bottom:0;font-size:11px}
+  .school-variant-c .school-polished .company-intro h1{grid-column:1;grid-row:2;font-size:32px;align-self:center;margin:0}
+  .school-variant-c .school-polished .company-intro h1 br{display:initial}
+  .school-variant-c .school-polished .company-intro>p:not(.company-eyebrow){grid-column:1/-1;font-size:14px}
+  .school-variant-c .school-polished .company-photo{grid-column:2;grid-row:2;height:112px;min-height:0;border-radius:11px;margin:0}
+  .school-variant-c .school-polished .company-actions{grid-column:1/-1;margin-top:0;gap:0 10px}
+  .school-variant-c .school-polished .company-intro .button{font-size:13px;padding-inline:15px;gap:8px}
+  .school-variant-c .school-polished .company-intro .company-text-link{font-size:12px}
+  .school-variant-c .school-polished .games-section{margin-top:23px}
+  .school-variant-c .school-polished .company-section-heading h2{font-size:25px}
+  .school-variant-c .school-polished .school-filter-bar{gap:10px;margin-bottom:16px}
+  .school-variant-c .school-polished .school-filters button{border-radius:8px;font-size:12px;padding-inline:12px}
+  .school-variant-c .school-polished .games-grid{grid-template-columns:1fr;gap:12px}
+  .school-variant-c .school-polished .game-copy{padding:0}
+  .school-variant-c .school-polished .game-image{aspect-ratio:1}
+  .school-variant-c .school-polished .game-copy h3{font-size:18px}
+}
+@media(max-width:350px){
+  .school-variant-b .school-polished .company-intro h1{font-size:31px}
+  .school-variant-b .school-polished .game-link{grid-template-columns:65px minmax(0,1fr);padding:11px;gap:10px}
+  .school-variant-b .school-polished .game-image{width:65px;height:76px}
+  .school-variant-c .school-polished .company-hero{grid-template-columns:minmax(0,1fr) 80px}
+  .school-variant-c .school-polished .company-intro h1{font-size:29px}
+}

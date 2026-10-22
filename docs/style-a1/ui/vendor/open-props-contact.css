@@ -1,0 +1,28 @@
+/* Open Props 1.7.23 — selected tokens. MIT. Source commit f39ab7c377a0e047f930982e3611bbc95254a260. */
+.contact-ready,.custom-proposal,.company-polished{
+ --ease-3:cubic-bezier(.25, 0, .3, 1);
+ --ease-out-3:cubic-bezier(0, 0, .3, 1);
+ --ease-in-out-2:cubic-bezier(.3, 0, .7, 1);
+ --radius-3:1rem;
+ --radius-round:1e5px;
+ --size-3:1rem;
+ --size-4:1.25rem;
+ --size-5:1.5rem;
+ --size-6:1.75rem;
+ --shadow-color:220 3% 15%;
+ --shadow-strength:1%;
+ --shadow-strength-3:calc(var(--shadow-strength) + 2%);
+ --shadow-strength-4:calc(var(--shadow-strength) + 3%);
+ --shadow-strength-5:calc(var(--shadow-strength) + 4%);
+ --shadow-strength-6:calc(var(--shadow-strength) + 5%);
+ --shadow-strength-8:calc(var(--shadow-strength) + 7%);
+ --shadow-2:
+    0 3px 5px -2px hsl(var(--shadow-color) / var(--shadow-strength-4)),
+    0 7px 14px -5px hsl(var(--shadow-color) / var(--shadow-strength-6));
+ --shadow-3:
+    0 -1px 3px 0 hsl(var(--shadow-color) / var(--shadow-strength-3)),
+    0 1px 2px -5px hsl(var(--shadow-color) / var(--shadow-strength-3)),
+    0 2px 5px -5px hsl(var(--shadow-color) / var(--shadow-strength-5)),
+    0 4px 12px -5px hsl(var(--shadow-color) / var(--shadow-strength-6)),
+    0 12px 15px -5px hsl(var(--shadow-color) / var(--shadow-strength-8));
+}

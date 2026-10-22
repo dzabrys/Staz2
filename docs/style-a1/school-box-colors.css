@@ -1,0 +1,24 @@
+/* Page-only box colours: white custom-order banner and the existing blue in the footer. */
+body.design-a.page-school #main .custom-game-card {
+  background: #fff;
+  border-color: #e0e7f0;
+  color: #102478;
+}
+body.design-a.page-school #main .custom-game-card :is(h3,p,.custom-link) { color: #102478; }
+body.design-a.page-school #main .custom-game-card .custom-link { border-color: #10247830; }
+body.design-a.page-school .a-site-footer.a-brand-footer {
+  background: url('footer-studio.svg?v=10') center / 100% 100% no-repeat #d9e8fd;
+  color: #102478;
+}
+body.design-a.page-school .a-brand-footer :is(h2,small) { color: #102478; }
+body.design-a.page-school .a-brand-footer .footer-logo:focus-visible { outline-color: #102478; }
+@media (max-width: 1050px) {
+  body.design-a.page-school .a-site-footer.a-brand-footer { background-image: url('footer-studio-mobile.svg?v=10'); }
+}
+@media (max-width: 700px) {
+  body.design-a.page-school .a-brand-footer address { border-top-color: #10247830; }
+}
+
+/* Studio artwork includes its own highlights and folds. */
+body.design-a.page-school .a-brand-footer::before,
+body.design-a.page-school .a-brand-footer::after { display: none; }

@@ -1,0 +1,19 @@
+/* School-specific details; shared offer layout is loaded before this file. */
+.modern-school .school-polished .company-photo>img{object-position:65% 43%}
+.modern-school .school-polished .school-filter-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 20px}
+.modern-school .school-polished .school-filter-bar[hidden],.modern-school .school-polished .game-card[hidden]{display:none}
+.modern-school .school-polished .school-filters{display:flex;flex-wrap:wrap;gap:8px}
+.modern-school .school-polished .school-filters button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 16px;border:1px solid #d6e1ed;border-radius:999px;background:#fff;color:#102478;font:700 13px/1.4 Lato,Arial,sans-serif;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s}
+.modern-school .school-polished .school-filters button[aria-pressed="true"]{background:#102478;color:#fff;border-color:#102478}
+.modern-school .school-polished .school-filters button:focus-visible{outline:3px solid #102478;outline-offset:3px}
+.modern-school .school-polished .school-result-count{font-size:12px;line-height:1.5;white-space:nowrap;color:#52617d;margin:0}
+.modern-school .school-polished .age{font-size:10px}
+@media(hover:hover) and (pointer:fine){.modern-school .school-polished .school-filters button:not([aria-pressed="true"]):hover{border-color:#102478;background:#f1f5fb}}
+@media(max-width:620px){
+  .modern-school .school-polished .company-photo>img{object-position:60% 43%}
+  .modern-school .school-polished .school-filter-bar{align-items:start;flex-direction:column;gap:9px;margin-bottom:15px}
+  .modern-school .school-polished .school-filters{gap:7px}
+  .modern-school .school-polished .school-filters button{min-height:40px;font-size:12px;padding:8px 13px}
+  .modern-school .school-polished .school-result-count{font-size:11px}
+  .modern-school .school-polished .age{font-size:9px;inset:6px auto auto 5px;padding:3px 5px;min-height:21px}
+}

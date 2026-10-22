@@ -1,0 +1,17 @@
+/* Shared footer chosen on szkoly1.html. Home page explicitly excluded. */
+body.design-a:not(.page-home) .a-site-footer.a-brand-footer {
+  background: url('footer-studio.svg?v=10') center / 100% 100% no-repeat #d9e8fd;
+  color: #102478;
+}
+body.design-a:not(.page-home) .a-brand-footer :is(h2,small) { color: #102478; }
+body.design-a:not(.page-home) .a-brand-footer .footer-logo:focus-visible { outline-color: #102478; }
+body.design-a:not(.page-home) .a-brand-footer::before,
+body.design-a:not(.page-home) .a-brand-footer::after { display: none; }
+@media (max-width: 1050px) {
+  body.design-a:not(.page-home) .a-site-footer.a-brand-footer {
+    background-image: url('footer-studio-mobile.svg?v=10');
+  }
+}
+@media (max-width: 700px) {
+  body.design-a:not(.page-home) .a-brand-footer address { border-top-color: #10247830; }
+}

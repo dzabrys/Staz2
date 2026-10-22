@@ -1,0 +1,93 @@
+/* Selected proposal 2: five portrait products and a separate custom-order banner. */
+body.audience-catalog .company-polished .games-grid {
+  display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); grid-auto-flow: row;
+  grid-auto-columns: auto; gap: 16px;
+  justify-content: start; align-items: stretch; align-content: start;
+  overflow-x: hidden; overflow-y: auto; max-height: var(--catalog-window,480px);
+  padding: 0 0 10px; scroll-snap-type: y proximity;
+  scrollbar-width: thin; scrollbar-color: #102478 #dce5f2;
+}
+body.audience-catalog .company-polished .games-grid:focus-visible { outline: 3px solid #102478; outline-offset: 4px; }
+body.audience-catalog .company-polished .games-grid.catalog-overflow {
+  width: calc(100% + 14px); margin-right: -14px; padding-right: 14px;
+  scrollbar-gutter: stable; overflow-y: scroll;
+}
+/* Keep a quiet fallback in Firefox; Chromium uses the rounded native track below. */
+body.audience-catalog .company-polished .games-grid { scrollbar-color: #102478 #e9eff8; }
+@supports selector(::-webkit-scrollbar) {
+  body.audience-catalog .company-polished .games-grid { scrollbar-width: auto; scrollbar-color: auto; }
+}
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar { width: 12px; }
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar-track {
+  background: #e9eff8; border-radius: 999px; margin-block: 6px;
+  box-shadow: inset 0 0 0 1px #dce5f2;
+}
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,#3553a0,#102478); border: 3px solid #e9eff8;
+  border-radius: 999px; background-clip: padding-box; min-height: 44px;
+}
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar-thumb:hover { background: #ff8818; background-clip: padding-box; }
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar-thumb:active { background: #d85d00; background-clip: padding-box; }
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
+body.audience-catalog .company-polished .games-grid::-webkit-scrollbar-corner { background: transparent; }
+body.audience-catalog .company-polished .game-card { aspect-ratio: auto; scroll-snap-align: start; }
+body.audience-catalog .company-polished .game-card[hidden] { display: none; }
+body.audience-catalog .company-polished .game-image { width: 100%; height: auto; aspect-ratio: 1.25; border-radius: 0; }
+body.audience-catalog .company-polished .game-link { display: flex; flex-direction: column; gap: 0; padding: 0; }
+body.audience-catalog .company-polished .game-copy { padding: 14px; }
+body.audience-catalog .company-polished .game-copy h3 { font-size: 19px; }
+body.audience-catalog .company-polished .catalog-custom-banner {
+  display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center;
+  gap: 24px; margin-top: 6px; padding: 20px; aspect-ratio: auto;
+}
+body.audience-catalog .company-polished .catalog-custom-banner h3 { font-size: 25px; margin-bottom: 8px; }
+body.audience-catalog .company-polished .catalog-custom-banner .section-eyebrow { margin-bottom: 8px; }
+body.audience-catalog .company-polished .catalog-custom-banner p:not(.section-eyebrow) { max-width: 80ch; }
+body.audience-catalog .company-polished .catalog-custom-banner .custom-link { border: 0; padding-top: 0; min-width: 180px; }
+.catalog-navigation { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 12px; }
+.catalog-navigation[hidden] { display: none; }
+.catalog-navigation p { margin: 0; font: 14px/1.5 Lato,Arial,sans-serif; color: #102478; }
+.catalog-navigation > div { display: flex; gap: 8px; }
+.catalog-navigation button {
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 0;
+  border: 0; border-radius: 50%; background: #102478; color: #fff; cursor: pointer;
+}
+.catalog-navigation button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
+.catalog-navigation button:disabled { background: #d9e1ee; color: #64718a; cursor: default; }
+.catalog-navigation button:focus-visible { outline: 3px solid #ff8818; outline-offset: 3px; }
+@media(max-width:1499px) {
+  body.audience-catalog .company-polished .games-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+}
+@media(max-width:1100px) {
+  body.audience-catalog .company-polished .games-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:760px) {
+  body.audience-catalog .company-polished .games-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  body.audience-catalog .company-polished .catalog-custom-banner { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  body.audience-catalog .company-polished .catalog-custom-banner .custom-link { justify-content: start; min-width: 0; }
+}
+@media(max-width:520px) {
+  body.audience-catalog .company-polished .games-section { padding-inline: 8px; }
+  body.audience-catalog .company-polished .games-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 10px; }
+  body.audience-catalog .company-polished .games-grid.catalog-overflow { width: calc(100% + 8px); margin-right: -8px; padding-right: 8px; }
+  body.audience-catalog .company-polished .game-copy { padding: 10px; text-align: left; }
+  body.audience-catalog .company-polished .game-copy h3 { font-size: 16px; line-height: 1.25; margin-bottom: 6px; }
+  body.audience-catalog .company-polished .game-category { font-size: 10px; line-height: 1.4; margin-bottom: 5px; }
+  body.audience-catalog .company-polished .game-description { font-size: 12px; line-height: 1.4; margin-bottom: 8px; }
+  body.audience-catalog .company-polished .game-bottom { flex-direction: column; align-items: stretch; gap: 6px; padding-top: 8px; }
+  body.audience-catalog .company-polished .price-block strong { font-size: 18px; }
+  body.audience-catalog .company-polished .price-block span { font-size: 10px; }
+  body.audience-catalog .company-polished .game-action { justify-content: space-between; min-height: 28px; font-size: 11px; gap: 4px; }
+  body.audience-catalog .company-polished .game-action .company-icon { width: 24px; height: 24px; padding: 5px; }
+  body.audience-catalog .company-polished .catalog-custom-banner { padding: 14px; gap: 8px; border-radius: 14px; }
+  body.audience-catalog .company-polished .catalog-custom-banner .section-eyebrow { font-size: 10px; margin-bottom: 6px; }
+  body.audience-catalog .company-polished .catalog-custom-banner h3 { font-size: 20px; line-height: 1.2; margin-bottom: 6px; }
+  body.audience-catalog .company-polished .catalog-custom-banner p:not(.section-eyebrow) { font-size: 13px; line-height: 1.45; }
+  body.audience-catalog .company-polished .catalog-custom-banner .custom-link { justify-content: space-between; min-height: 36px; font-size: 12px; gap: 8px; }
+  body.audience-catalog .company-polished .catalog-custom-banner .custom-link .company-icon { width: 26px; height: 26px; padding: 5px; }
+  .catalog-navigation p { font-size: 13px; }
+}
+@media(max-width:360px) {
+  body.audience-catalog .company-polished .game-copy { padding: 9px; }
+  body.audience-catalog .company-polished .game-copy h3 { font-size: 15px; }
+}

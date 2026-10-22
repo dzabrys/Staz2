@@ -1,0 +1,7 @@
+{
+  "name": "wielkie-gry-planszowe-staz2",
+  "private": true,
+  "scripts": {
+    "start": "node server/serve.cjs"
+  }
+}

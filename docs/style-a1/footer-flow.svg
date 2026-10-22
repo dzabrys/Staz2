@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="none">
+<defs>
+<linearGradient id="wave" gradientUnits="userSpaceOnUse" x1="200" y1="180" x2="500" y2="430"><stop stop-color="#102478"/><stop offset=".6" stop-color="#ff8818"/><stop offset="1" stop-color="#ff8818"/></linearGradient>
+<linearGradient id="crest" gradientUnits="userSpaceOnUse" x1="1320" y1="160" x2="1560" y2="-30"><stop stop-color="#102478"/><stop offset=".72" stop-color="#ff8818"/><stop offset="1" stop-color="#ff8818"/></linearGradient>
+<linearGradient id="underflow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102478"/><stop offset="1" stop-color="#102478" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1600" height="400" fill="#102478"/>
+<path d="M1040 -40 C1200 12 1270 143 1430 126 C1550 114 1640 26 1710 -90 V-120 H1040 Z" fill="url(#crest)"/>
+<path d="M0 224 C163 173 275 346 448 334 S744 169 942 288 S1320 383 1600 313 V400 H0 Z" fill="url(#wave)"/>
+<path d="M510 400 C701 246 837 206 1016 302 S1343 389 1600 299 V400 Z" fill="url(#underflow)"/>
+<path d="M0 224 C163 173 275 346 448 334 S744 169 942 288 S1320 383 1600 313" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1.5"/>
+</svg>

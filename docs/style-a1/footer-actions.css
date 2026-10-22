@@ -1,0 +1,35 @@
+/* Footer contact actions retain the original typography and colours. */
+.a-site-footer .footer-email-control { position: relative; display: block; min-width: 0; width: fit-content; max-width: 100%; }
+.a-site-footer .footer-email-copy {
+  appearance: none; display: flex; align-items: center; min-height: 34px;
+  width: fit-content; max-width: 100%; padding: 0; margin: 0; border: 0;
+  background: transparent; color: inherit; font: inherit; line-height: inherit;
+  text-align: left; overflow-wrap: anywhere; cursor: pointer;
+}
+.a-site-footer .footer-phone { display: flex; align-items: center; min-height: 34px; width: fit-content; color: inherit; }
+.a-site-footer .footer-email-copy:hover { text-decoration: underline; text-underline-offset: 5px; }
+.a-site-footer .footer-email-copy:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; border-radius: 4px; }
+.a-site-footer .footer-copy-toast {
+  position: absolute; left: 0; bottom: calc(100% + 8px); z-index: 3;
+  width: max-content; max-width: min(260px, 75vw); box-sizing: border-box;
+  padding: 8px 12px; border: 1px solid #ffffff40; border-radius: 8px;
+  background: #102478; color: #fff; box-shadow: 0 4px 14px #10247826;
+  font: 400 12px/1.4 Arial, sans-serif; font-style: normal;
+  opacity: 0; transform: translateY(4px); pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.a-site-footer .footer-copy-toast.is-visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 1050px) {
+  .a-site-footer .footer-email-copy, .a-site-footer .footer-phone { min-height: 44px; }
+}
+@media (max-width: 700px) {
+  body.design-a .a-brand-footer address > .footer-email-control { grid-column: 1 / -1; }
+  body.design-a .a-brand-footer address > .footer-phone { grid-column: 1; grid-row: 2; align-self: center; }
+  body.design-a .a-brand-footer address > .footer-email-control .footer-email-copy,
+  body.design-a .a-brand-footer address > .footer-phone { min-height: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .a-site-footer .footer-copy-toast { transition: none; transform: none; }
+}
+
+body .a-site-footer address small > .footer-map-link { display: inline-block; width: auto; min-height: 0; color: inherit; font: inherit; line-height: inherit; }

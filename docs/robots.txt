@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dzabrys.github.io/Staz2/sitemap.xml
