@@ -77,9 +77,9 @@
 
   if($('.hero-carousel')){
     const slides=[
-      ['Wielkie gry, które angażują,<br>uczą i zostają w pamięci.','Poznaj gry dla szkół','szkoly1.html','gry dla szkół'],
-      ['Wspólne wyzwania,<br>silniejsze zespoły.','Poznaj gry dla firm','firmy1.html','gry dla firm'],
-      ['Twoja idea,<br>nasza realizacja.','Odkryj gry na zamówienie','gry-na-zamowienie1.html','gry na zamówienie']
+      ['Wielkie gry, które angażują,<br>uczą i zostają w pamięci.','Poznaj gry dla szkół','szkoly.html','gry dla szkół'],
+      ['Wspólne wyzwania,<br>silniejsze zespoły.','Poznaj gry dla firm','firmy.html','gry dla firm'],
+      ['Twoja idea,<br>nasza realizacja.','Odkryj gry na zamówienie','gry-na-zamowienie.html','gry na zamówienie']
     ];
     let active=0;
     const show = number => {

@@ -6,25 +6,26 @@
     running.add(animation);
     animation.finished.then(() => running.delete(animation)).catch(() => running.delete(animation));
   };
-  const animate = (el, delay = 0) => {
-    const base = getComputedStyle(el).transform;
+  const animate = (el, base, delay = 0) => {
     track(el.animate([
       {transform:`translateY(8px) ${base === 'none' ? '' : base}`},
       {transform:base}
     ], {duration:480, delay, easing:'cubic-bezier(.22,.61,.36,1)'}));
   };
   // Text moves once; images, links and headings are never hidden behind JS.
-  document.querySelectorAll('.hero-copy,.audience-copy,.subpage-intro,.subpage-aside,.offer-heading,.selection-heading,.product-heading,.proposal-intro').forEach((el, index) => {
-    animate(el, Math.min(index * 45, 135));
-  });
+  const animateBatch = (elements, stagger = false) => {
+    if (pref.matches) return;
+    // Read every starting transform before starting animations (layout writes).
+    const prepared = Array.from(elements, el => ({el, base:getComputedStyle(el).transform}));
+    prepared.forEach(({el, base}, index) => animate(el, base, stagger ? Math.min(index * 45, 135) : 0));
+  };
+  animateBatch(document.querySelectorAll('.hero-copy,.audience-copy,.subpage-intro,.subpage-aside,.offer-heading,.selection-heading,.product-heading,.proposal-intro'), true);
   let observer;
   if ('IntersectionObserver' in window) {
     observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        observer.unobserve(entry.target);
-        if (!pref.matches) animate(entry.target);
-      }
+      const visible = entries.filter(entry => entry.isIntersecting).map(entry => entry.target);
+      visible.forEach(el => observer.unobserve(el));
+      animateBatch(visible);
     }, {threshold:.08});
     // Animate card contents so entrance and card hover never fight over transform.
     document.querySelectorAll('.game-copy,.catalog-copy,.product-copy,.steps>li,.mission-values>article,.brief-list>li,.benefits h2,.home-footer .competencies,.proposal-format-copy,.proposal-section-heading,.proposal-contact').forEach(el => observer.observe(el));

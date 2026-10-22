@@ -2,6 +2,12 @@
   "name": "wielkie-gry-planszowe-staz2",
   "private": true,
   "scripts": {
-    "start": "node server/serve.cjs"
+    "start": "node server/serve.cjs",
+    "optimize:home": "node tools/optimize-home.cjs",
+    "check:home": "node tools/check-home.cjs"
+  },
+  "devDependencies": {
+    "lightningcss": "1.33.0",
+    "sharp": "0.35.5"
   }
 }
